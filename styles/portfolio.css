@@ -11,7 +11,17 @@
 .display-flex{
     display: flex;
 }
-
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
 /* color styles */
 .primary-background-clr{
@@ -80,13 +90,98 @@
     
 }
 
+/* Quick list of Our Features section */
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.out-feature{
+    margin-left: 130px;
+}
+
+#feature-title-1{
+    font-weight: 500;
+}
+#feature-title-3{
+   color:#FF900E ;
+}
+
+/* Features you will love & enjoy section */
 
 
 
-/* responsive media query */
-@media screen and (max-width:576px){
-    .navbar, .nav-links {
-        flex-direction: column;
-    }
+
+/* Some Facts section */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    
     
 }
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.fact-discription{
+    max-width: 540px;
+}
+
+
+
+
+/* responsive media query - for mobile */
+@media screen and (max-width:576px){
+    .navbar, 
+    .nav-links, 
+    .teams {
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .out-feature{
+        margin: 50px;
+    }
+
+    
+}
+
+/* responsive media query - for Tab */
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .teams{
+        flex-direction: column;
+    }
+    .out-feature{
+        margin: 50px;
+    }
+
+
+
+}
+
+
